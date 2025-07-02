@@ -12,13 +12,13 @@ import java.util.Optional;
 // spring container에 자동 등록
 // component scan 방식, @Component 포함된 애노테이션 자동 의존관걔 추가
 // 애노테이션은 Application이 포함된 패키지에서만 스캔
-@Service
+// @Service
 public class MemberService {
 
     private final MemberRepository memberRepository;
 
     // dependency injection: 서비스 객체가 자신이 의존하는 리포지토리 객체의 구현체를 직접 생성하지 않고 외부에서 전달
-    @Autowired
+    // @Autowired
     public MemberService(MemberRepository memberRepository){
         this.memberRepository = memberRepository;
     }
