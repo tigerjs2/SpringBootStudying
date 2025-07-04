@@ -5,6 +5,7 @@ import hello.hello_spring.repository.MemberRepository;
 import hello.hello_spring.repository.MemoryMemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
@@ -13,6 +14,7 @@ import java.util.Optional;
 // component scan 방식, @Component 포함된 애노테이션 자동 의존관걔 추가
 // 애노테이션은 Application이 포함된 패키지에서만 스캔
 // @Service
+@Transactional
 public class MemberService {
 
     private final MemberRepository memberRepository;
